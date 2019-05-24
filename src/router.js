@@ -7,7 +7,7 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    // 路由规则的第一项与菜单有关联，修改时要注意
+    // 路由规则的第一项与菜单有关联，修改时注意
     {
       path: '/',
       component: () => import('@/views/BasicLayout'),
@@ -26,6 +26,7 @@ export default new Router({
           meta: {
             title: '用户管理'
           },
+          redirect: '/user/system',
           component: { render: h => h('router-view') },
           children: [
             {
@@ -52,6 +53,7 @@ export default new Router({
           meta: {
             title: '企业管理'
           },
+          redirect: '/company/settled',
           component: { render: h => h('router-view') },
           children: [
             {
@@ -86,6 +88,7 @@ export default new Router({
           meta: {
             title: '数据中心'
           },
+          redirect: '/data/situation',
           component: { render: h => h('router-view') },
           children: [
             {
@@ -112,10 +115,11 @@ export default new Router({
           meta: {
             title: '个人中心'
           },
+          redirect: '/personal/information',
           component: { render: h => h('router-view') },
           children: [
             {
-              path: '/center/information',
+              path: '/personal/information',
               name: 'information',
               meta: {
                 title: '个人信息'
