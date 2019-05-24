@@ -101,22 +101,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.basic_layout {
-    // 头部
-    .header.ant-layout-header {
-    height: 52px;
-    line-height: 52px;
-    }
-    .ant-layout {
-        width: 1080px;
-        margin: 20px auto 0;
-    }
-    // 内容
-    .ant-layout.ant-layout-has-sider {
-        width: 1080px;
-        margin: 20px auto 0;
-    }
-}
-</style>
+<style lang="scss" src="../style/layout.scss"/>
 

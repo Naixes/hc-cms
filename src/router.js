@@ -10,6 +10,7 @@ export default new Router({
     // 路由规则的第一项与菜单有关联，修改时注意
     {
       path: '/',
+      redirect: '/home',
       component: () => import('@/views/BasicLayout'),
       children: [
         {
